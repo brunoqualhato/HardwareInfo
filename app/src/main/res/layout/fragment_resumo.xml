@@ -4,7 +4,7 @@
     android:id="@+id/tela"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Atividades.fragmentos.Resumo">
+    tools:context=".fragmentos.Resumo">
 
 
     <ListView

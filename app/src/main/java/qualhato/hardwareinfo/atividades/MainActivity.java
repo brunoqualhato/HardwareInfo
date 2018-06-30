@@ -1,14 +1,13 @@
-package qualhato.hardwareinfo.Atividades;
+package qualhato.hardwareinfo.atividades;
 
-import android.app.FragmentTransaction;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 
-import qualhato.hardwareinfo.Atividades.fragmentos.Resumo;
 import qualhato.hardwareinfo.R;
+import qualhato.hardwareinfo.fragmentos.Resumo;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +17,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button resumo = (Button) findViewById(R.id.btnResumo);
+        Button hardware = (Button) findViewById(R.id.btnHardware);
 
+        hardware.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, HardwareActivity.class);
+                startActivity(i);
+            }
+        });
 
         resumo.setOnClickListener(new View.OnClickListener() {
             @Override
