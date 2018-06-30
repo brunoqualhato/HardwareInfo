@@ -1,8 +1,11 @@
 package qualhato.hardwareinfo.Atividades.hardware;
 
 import android.os.Build;
+import android.util.Log;
 
 import java.io.File;
+import java.io.IOException;
+import java.io.RandomAccessFile;
 
 public class ObterHardware {
 
@@ -92,4 +95,20 @@ public class ObterHardware {
     public String lancamento() {
         return Build.VERSION.RELEASE;
     }
+
+    public void usoDoProcessador() {
+        
+        try {
+            RandomAccessFile reader = new RandomAccessFile("/proc/stat", "r");
+            String load = reader.readLine();
+            while (load != null) {
+                Log.d("CPU", "Uso CPU: " + load);
+                load = reader.readLine();
+            }
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
+    }
+
+
 }
