@@ -26,12 +26,12 @@ public class HomeActivity extends AppCompatActivity {
             switch (item.getItemId()) {
                 case R.id.navigation_resumo:
                     getSupportFragmentManager().beginTransaction()
-                            .add(R.id.resumo, new Resumo())
+                            .replace(R.id.resumo, new Resumo())
                             .commit();
                     return true;
                 case R.id.navigation_processador:
                     getSupportFragmentManager().beginTransaction()
-                            .add(R.id.resumo, new Resumo())
+                            .replace(R.id.resumo, new Processador())
                             .commit();
                     return true;
                 case R.id.navigation_sensores:
