@@ -1,24 +1,30 @@
 package qualhato.hardwareinfo.hardware;
 
+import android.content.Context;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.util.Log;
+import android.widget.TextView;
 
 import java.io.File;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+
+import static android.content.Context.WIFI_SERVICE;
 
 public class ObterHardwarePadrao {
 
     public String quantidadeDeProcessadores() {
 
 
-        return Runtime.getRuntime().availableProcessors() + " Processadores";
+        return Runtime.getRuntime().availableProcessors() + "";
     }
 
     public String memoriaRamLivre() {
 
 
-        return String.valueOf(Runtime.getRuntime().freeMemory()) + "(MB)";
+        return String.valueOf(Runtime.getRuntime().freeMemory());
     }
 
     public long capacidadeRam() {
@@ -33,7 +39,7 @@ public class ObterHardwarePadrao {
     public String memoriaAvaliada() {
 
 
-        return String.valueOf(Runtime.getRuntime().totalMemory()) + " de memoria Avaliada";
+        return String.valueOf(Runtime.getRuntime().totalMemory()) + "";
     }
 
     public void armazenamento() {

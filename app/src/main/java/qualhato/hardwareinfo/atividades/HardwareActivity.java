@@ -1,5 +1,7 @@
 package qualhato.hardwareinfo.atividades;
 
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,9 +24,13 @@ public class HardwareActivity extends AppCompatActivity {
         setContentView(R.layout.activity_hardware);
         ObterSensores obterSensores = new ObterSensores();
 
-        final TextView usoProcessador = (TextView) findViewById(R.id.ttvProcessador);
+        TextView usoProcessador = (TextView) findViewById(R.id.ttvProcessador);
 
-        obterSensores.obterSensores(this, usoProcessador);
+        WifiManager myWifiManager = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
+        WifiInfo myWifiInfo = myWifiManager.getConnectionInfo();
+        int ipAddress = myWifiInfo.getIpAddress();
+        usoProcessador.setText("Wifi: " + ipAddress);
+      //  obterSensores.obterSensores(this, );
     }
 
 

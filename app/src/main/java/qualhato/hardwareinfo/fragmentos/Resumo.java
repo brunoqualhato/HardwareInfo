@@ -1,5 +1,8 @@
 package qualhato.hardwareinfo.fragmentos;
 
+import android.content.Context;
+import android.net.wifi.WifiInfo;
+import android.net.wifi.WifiManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -13,6 +16,8 @@ import java.util.ArrayList;
 import qualhato.hardwareinfo.R;
 import qualhato.hardwareinfo.hardware.ObterHardwarePadrao;
 
+import static android.content.Context.WIFI_SERVICE;
+
 
 public class Resumo extends Fragment {
 
@@ -21,7 +26,6 @@ public class Resumo extends Fragment {
                              Bundle savedInstanceState) {
         ObterHardwarePadrao obterHardwarePadrao = new ObterHardwarePadrao();
         View view = inflater.inflate(R.layout.fragment_resumo, container, false);
-
 
         ListView listaTela = (ListView) view.findViewById(R.id.listaResumo);
         ArrayList<String> lista = new ArrayList<>();

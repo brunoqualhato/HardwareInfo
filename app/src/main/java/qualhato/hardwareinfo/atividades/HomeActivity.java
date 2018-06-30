@@ -16,8 +16,6 @@ import qualhato.hardwareinfo.fragmentos.Resumo;
 
 public class HomeActivity extends AppCompatActivity {
 
-    private TextView mTextMessage;
-
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
 
