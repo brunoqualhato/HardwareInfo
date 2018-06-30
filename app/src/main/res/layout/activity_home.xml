@@ -7,11 +7,17 @@
     tools:context=".atividades.HomeActivity">
 
     <LinearLayout
-        android:id="@+id/container"
+        android:id="@+id/processador"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/resumo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@android:color/white"
-        android:orientation="horizontal" />
+        android:orientation="vertical" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
