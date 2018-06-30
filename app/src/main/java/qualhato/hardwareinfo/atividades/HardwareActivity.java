@@ -6,7 +6,13 @@ import android.util.Log;
 import android.widget.TextView;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.RandomAccessFile;
+
+import qualhato.hardwareinfo.R;
+import qualhato.hardwareinfo.hardware.ObterHardwarePadrao;
+import qualhato.hardwareinfo.hardware.ObterProcessador;
+import qualhato.hardwareinfo.hardware.ObterSensores;
 
 public class HardwareActivity extends AppCompatActivity {
 
@@ -14,21 +20,12 @@ public class HardwareActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hardware);
+        ObterSensores obterSensores = new ObterSensores();
 
-        TextView usoProcessador = (TextView) findViewById(R.id.ttvProcessador);
+        final TextView usoProcessador = (TextView) findViewById(R.id.ttvProcessador);
+
+        obterSensores.obterSensores(this, usoProcessador);
     }
 
-    public void UsoDoProcessador() {
 
-        try {
-            RandomAccessFile reader = new RandomAccessFile("/proc/stat", "r");
-            String load = reader.readLine();
-            while (load != null) {
-                usoProcessador.setText("CPU", "Uso CPU: " + load);
-                load = reader.readLine();
-            }
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-    }
 }
