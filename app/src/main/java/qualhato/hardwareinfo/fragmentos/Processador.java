@@ -38,6 +38,8 @@ public class Processador extends Fragment {
                 int i  = 0;
                 while (i++ < 1000) {
                     try {
+                        if(getActivity() == null)
+                            return;
                         getActivity().runOnUiThread(new Runnable() {
 
                             @Override

@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-//        getSupportFragmentManager().beginTransaction()
-//                .add(R.id.conteiner, new Resumo())
-//                .commit();
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.conteiner, new Resumo())
+                .commit();
 
 
 
@@ -98,15 +98,15 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_resumo) {
 
-//            getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.conteiner, new Resumo())
-//                    .commit();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.conteiner, new Resumo())
+                    .commit();
 
         } else if (id == R.id.nav_processador) {
 
-//            getSupportFragmentManager().beginTransaction()
-//                    .replace(R.id.conteiner, new Processador())
-//                    .commit();
+            getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.conteiner, new Processador())
+                    .commit();
 
         } else if (id == R.id.nav_sensores) {
 
