@@ -15,6 +15,7 @@ import java.util.ArrayList;
 
 import qualhato.hardwareinfo.R;
 import qualhato.hardwareinfo.hardware.ObterHardwarePadrao;
+import qualhato.hardwareinfo.util.ConverteValores;
 
 import static android.content.Context.WIFI_SERVICE;
 
@@ -25,12 +26,13 @@ public class Resumo extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ObterHardwarePadrao obterHardwarePadrao = new ObterHardwarePadrao();
+
         View view = inflater.inflate(R.layout.fragment_resumo, container, false);
 
         ListView listaTela = (ListView) view.findViewById(R.id.listaResumo);
         ArrayList<String> lista = new ArrayList<>();
         lista.add("Numero de processadores: "+obterHardwarePadrao.quantidadeDeProcessadores());
-        lista.add("bytes de memoria ram: " + obterHardwarePadrao.capacidadeRam());
+        lista.add("bytes de memoria ram: " + ConverteValores.byteParaGigaByte(obterHardwarePadrao.capacidadeRam()));
         lista.add("bytes de memoria ram avaliada: " + obterHardwarePadrao.memoriaAvaliada());
         lista.add("bytes de memoria ram livre: " + obterHardwarePadrao.memoriaRamLivre());
         lista.add("Board: " + obterHardwarePadrao.board());

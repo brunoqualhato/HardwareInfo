@@ -16,6 +16,7 @@ import static android.content.Context.WIFI_SERVICE;
 
 public class ObterHardwarePadrao {
 
+
     public String obterWifi(Context context){
 
         WifiManager wifiMgr = (WifiManager) context.getSystemService(WIFI_SERVICE);
