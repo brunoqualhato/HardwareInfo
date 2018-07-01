@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
+import android.text.format.Formatter;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -14,6 +15,16 @@ import java.io.RandomAccessFile;
 import static android.content.Context.WIFI_SERVICE;
 
 public class ObterHardwarePadrao {
+
+    public String obterWifi(Context context){
+
+        WifiManager wifiMgr = (WifiManager) context.getSystemService(WIFI_SERVICE);
+        WifiInfo wifiInfo = wifiMgr.getConnectionInfo();
+        int ip = wifiInfo.getIpAddress();
+        String ipAddress = Formatter.formatIpAddress(ip);
+
+       return "Wifi: " + ipAddress;
+    }
 
     public String quantidadeDeProcessadores() {
 

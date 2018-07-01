@@ -29,7 +29,7 @@ public class Resumo extends Fragment {
 
         ListView listaTela = (ListView) view.findViewById(R.id.listaResumo);
         ArrayList<String> lista = new ArrayList<>();
-        lista.add(obterHardwarePadrao.quantidadeDeProcessadores());
+        lista.add("Numero de processadores: "+obterHardwarePadrao.quantidadeDeProcessadores());
         lista.add("bytes de memoria ram: " + obterHardwarePadrao.capacidadeRam());
         lista.add("bytes de memoria ram avaliada: " + obterHardwarePadrao.memoriaAvaliada());
         lista.add("bytes de memoria ram livre: " + obterHardwarePadrao.memoriaRamLivre());
@@ -45,6 +45,7 @@ public class Resumo extends Fragment {
         lista.add("Versão do Sistema:" + obterHardwarePadrao.versaoDoSistema());
         lista.add("Usuario: " + obterHardwarePadrao.usuario());
         lista.add("SDK: " + obterHardwarePadrao.versaoSDK());
+        lista.add(obterHardwarePadrao.obterWifi(getContext()));
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 getContext(),
