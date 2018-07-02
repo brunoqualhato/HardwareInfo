@@ -30,15 +30,16 @@ public class Resumo extends Fragment {
                              Bundle savedInstanceState) {
         ObterHardwarePadrao obterHardwarePadrao = new ObterHardwarePadrao();
         ObterBateria obterBateria = new ObterBateria();
+
         View view = inflater.inflate(R.layout.fragment_resumo, container, false);
 
 
         ListView listaTela = (ListView) view.findViewById(R.id.listaResumo);
         ArrayList<String> lista = new ArrayList<>();
         lista.add("Numero de processadores: "+obterHardwarePadrao.quantidadeDeProcessadores());
-        lista.add("bytes de memoria ram: " + ConverteValores.byteParaGigaByte(obterHardwarePadrao.capacidadeRam()));
-        lista.add("bytes de memoria ram avaliada: " + obterHardwarePadrao.memoriaAvaliada());
-        lista.add("bytes de memoria ram livre: " + obterHardwarePadrao.memoriaRamLivre());
+        lista.add("total de memoria ram: " + ConverteValores.pegaTamanho(obterHardwarePadrao.totalDeMemoriaRam(getContext())));
+        lista.add("memoria ram Usada : " +ConverteValores.pegaTamanho(obterHardwarePadrao.ramUsada(getContext())));
+        lista.add(" memoria ram livre : " + ConverteValores.pegaTamanho(obterHardwarePadrao.memoriaRamLivre(getContext())));
         lista.add("Board: " + obterHardwarePadrao.board());
         lista.add("Fabricação: " + obterHardwarePadrao.fabricacao());
         lista.add("Host: " + obterHardwarePadrao.host());
