@@ -17,4 +17,8 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="title_activity_tutorial">TutorialActivity</string>
     <string name="app_intro">teste</string>
+
+
+    <string name="app_intro_skip_button">PULAR</string>
+    <string name="app_intro_done_button">PRONTO</string>
 </resources>
