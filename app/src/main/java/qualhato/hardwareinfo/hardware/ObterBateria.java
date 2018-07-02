@@ -20,6 +20,7 @@ public class ObterBateria {
         IntentFilter batteryIntentFilter = new IntentFilter(Intent.ACTION_BATTERY_CHANGED);
         Intent batteryIntent = context.registerReceiver(null, batteryIntentFilter);
 
+        //Verifica se tem bateria no celular
         boolean present = batteryIntent.getExtras().getBoolean(BatteryManager.EXTRA_PRESENT);
         sb.append("PRESENTE?: " + present + "\n");
 
