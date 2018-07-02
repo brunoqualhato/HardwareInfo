@@ -4,6 +4,7 @@
     <color name="colorPrimaryDark">#9f48fc</color>
     <color name="colorAccent">#ff4040</color>
 
+    <!--cores de cada tela do tutorial-->
     <color name="Intro1">#c64e77</color>
     <color name="Intro2">#25ed46</color>
     <color name="Intro3">#3c45e6</color>

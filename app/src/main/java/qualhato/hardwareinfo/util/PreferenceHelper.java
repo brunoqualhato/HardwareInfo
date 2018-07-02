@@ -5,6 +5,9 @@ import android.content.SharedPreferences;
 
 public class PreferenceHelper {
 
+    //essa classe verifica se o app já foi aberto mais de uma vez
+    //sem essa classe, mostra a tela de tutorial toda vez que abre o app
+
     private final String INTRO = "intro";
     private SharedPreferences app_prefs;
     private Context context;
