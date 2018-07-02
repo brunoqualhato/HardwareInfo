@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">HardwareInfo</string>
+    <integer name="slide_animation_duration">400</integer>
 </resources>
