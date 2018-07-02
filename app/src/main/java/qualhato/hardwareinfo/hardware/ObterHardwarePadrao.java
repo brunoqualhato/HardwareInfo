@@ -53,7 +53,7 @@ public class ObterHardwarePadrao {
 
     public long ramUsada(Context context) {
         Runtime runtime = Runtime.getRuntime();
-        long usedMemInMB= totalDeMemoriaRam(context) - memoriaRamLivre(context);
+        long usedMemInMB = totalDeMemoriaRam(context) - memoriaRamLivre(context);
 
         return usedMemInMB;
 

@@ -36,9 +36,9 @@ public class Resumo extends Fragment {
 
         ListView listaTela = (ListView) view.findViewById(R.id.listaResumo);
         ArrayList<String> lista = new ArrayList<>();
-        lista.add("Numero de processadores: "+obterHardwarePadrao.quantidadeDeProcessadores());
+        lista.add("Numero de processadores: " + obterHardwarePadrao.quantidadeDeProcessadores());
         lista.add("total de memoria ram: " + ConverteValores.pegaTamanho(obterHardwarePadrao.totalDeMemoriaRam(getContext())));
-        lista.add("memoria ram Usada : " +ConverteValores.pegaTamanho(obterHardwarePadrao.ramUsada(getContext())));
+        lista.add("memoria ram Usada : " + ConverteValores.pegaTamanho(obterHardwarePadrao.ramUsada(getContext())));
         lista.add(" memoria ram livre : " + ConverteValores.pegaTamanho(obterHardwarePadrao.memoriaRamLivre(getContext())));
         lista.add("Board: " + obterHardwarePadrao.board());
         lista.add("Fabricação: " + obterHardwarePadrao.fabricacao());
@@ -54,8 +54,6 @@ public class Resumo extends Fragment {
         lista.add("SDK: " + obterHardwarePadrao.versaoSDK());
         lista.add(obterHardwarePadrao.obterWifi(getContext()));
         lista.add(obterBateria.readBattery(getContext()));
-
-
 
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(

@@ -1,7 +1,5 @@
 package qualhato.hardwareinfo.util;
 
-import java.text.DecimalFormat;
-
 public class ConverteValores {
 
     public static String pegaTamanho(long num) {
