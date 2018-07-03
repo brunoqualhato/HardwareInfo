@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">HardwareInfo</string>
+    <string name="device">Dispositivo</string>
+    <string name="os">Sistema Operacional</string>
+    <string name="sensor">Sensores</string>
+    <string name="cpu">CPU</string>
+    <string name="battery">Bateria</string>
+    <string name="display">Tela</string>
+    <string name="storage">Memoria</string>
+    <string name="features">Extras</string>
+    <string name="user_apps">Apps do usuário</string>
+    <string name="system_apps">Apps do sistema</string>
+    <string name="about_us">Sobre</string>
+</resources>
