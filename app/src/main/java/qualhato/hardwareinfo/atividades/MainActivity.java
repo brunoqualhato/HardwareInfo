@@ -14,7 +14,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import qualhato.hardwareinfo.R;
-import qualhato.hardwareinfo.SIM;
+import qualhato.hardwareinfo.fragmentos.SIM;
 import qualhato.hardwareinfo.fragmentos.APPS;
 import qualhato.hardwareinfo.fragmentos.Bateria;
 import qualhato.hardwareinfo.fragmentos.Bluetooth;
@@ -24,7 +24,6 @@ import qualhato.hardwareinfo.fragmentos.DetalhesSensores;
 import qualhato.hardwareinfo.fragmentos.Extras;
 import qualhato.hardwareinfo.fragmentos.Internet;
 import qualhato.hardwareinfo.fragmentos.Memoria;
-import qualhato.hardwareinfo.fragmentos.Processador;
 import qualhato.hardwareinfo.fragmentos.Resumo;
 import qualhato.hardwareinfo.fragmentos.SistemaOperacional;
 import qualhato.hardwareinfo.fragmentos.Sobre;

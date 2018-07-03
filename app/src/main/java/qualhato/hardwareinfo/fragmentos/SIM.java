@@ -1,4 +1,4 @@
-package qualhato.hardwareinfo;
+package qualhato.hardwareinfo.fragmentos;
 
 import android.content.Context;
 import android.net.Uri;
@@ -7,6 +7,8 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import qualhato.hardwareinfo.R;
 
 
 public class SIM extends Fragment {

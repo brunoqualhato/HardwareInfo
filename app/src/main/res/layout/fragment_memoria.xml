@@ -33,7 +33,7 @@ tools:context=".fragmentos.Memoria">
                 android:orientation="horizontal">
 
                 <com.github.lzyzsd.circleprogress.DonutProgress
-                    android:id="@+id/donut_ram_usage"
+                    android:id="@+id/donut_ram_usada"
                     android:layout_width="100dp"
                     android:layout_height="100dp"
                     android:fontFamily="@font/lato_regular"
@@ -64,7 +64,7 @@ tools:context=".fragmentos.Memoria">
                         tools:targetApi="jelly_bean" />
 
                     <TextView
-                        android:id="@+id/tv_used_memory"
+                        android:id="@+id/tv_memoria_usada"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -76,7 +76,7 @@ tools:context=".fragmentos.Memoria">
                         tools:targetApi="jelly_bean" />
 
                     <TextView
-                        android:id="@+id/tv_free_memory"
+                        android:id="@+id/tv_memoria_livre"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -88,7 +88,7 @@ tools:context=".fragmentos.Memoria">
                         tools:targetApi="jelly_bean" />
 
                     <TextView
-                        android:id="@+id/tv_total_memory"
+                        android:id="@+id/tv_memoria_total"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"

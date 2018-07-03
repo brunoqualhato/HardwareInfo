@@ -1,11 +1,13 @@
 package qualhato.hardwareinfo.hardware;
 
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
 import android.os.Build;
 import android.text.format.Formatter;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.widget.TextView;
 
@@ -23,7 +25,10 @@ import static android.content.Context.ACTIVITY_SERVICE;
 import static android.content.Context.WIFI_SERVICE;
 
 public class ObterHardwarePadrao {
-
+    public static int calculatePercentage(double value, double total) {
+        double usage = (int) ((value * 100.0f) / total);
+        return (int) usage;
+    }
 
     public String obterWifi(Context context) {
 
@@ -79,9 +84,26 @@ public class ObterHardwarePadrao {
         }
 
     }
+    public String resolucao(Activity context){
+        DisplayMetrics metrics = new DisplayMetrics();
+        context.getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
+        int height = metrics.heightPixels;
+        int width = metrics.widthPixels;
+
+        return height +" X "+width;
+    }
     public String serial() {
         return Build.SERIAL;
+    }
+
+    public String bootloader() {
+        return Build.BOOTLOADER;
+    }
+
+
+    public String hardware() {
+        return Build.HARDWARE;
     }
 
     public String modelo() {
