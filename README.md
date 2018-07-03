@@ -15,4 +15,6 @@ Abra o cmd ou terminal onde vc baixou esse projeto.
 
 4: Após feito as modificações digite: git add -A
 
-5: E por fim, para enviar suas modificações digite: git push
+5: Digite: git commit -m "Sua mensagem", para registrar suas modificações
+
+6: E por fim, para enviar suas modificações digite: git push
